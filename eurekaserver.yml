@@ -3,10 +3,14 @@ server:
 
 eureka:
   instance:
+  #  the host name of the service
     hostname: localhost
   client:
+  # since i dont want to fetch any registry values to this service i mark it as false
     fetchRegistry: false
+    # i dont want to register this in my registry
     registerWithEureka: false
     serviceUrl:
+    #  the exposed url
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
     
