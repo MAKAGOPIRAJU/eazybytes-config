@@ -1,12 +1,18 @@
 server:
   port: 8070
+# The name of this file should matched to the application name that we provided in the application.yml
 
+# In the below eureka.instance.hostname is defined what is the host
+#  eureka.client.fetchRegistry  by default this value is true but i dont want to fetch any microservice value to this so that's why i am going to make it as false
+# eureka.clietn.registerWithEureka , i dont want to register this in my registry
+# 
 eureka:
   instance:
     hostname: localhost
   client:
     fetchRegistry: false
     registerWithEureka: false
+    # the exposed url of eureka server
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
     
