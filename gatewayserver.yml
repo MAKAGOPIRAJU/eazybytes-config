@@ -1,6 +1,7 @@
 server:
   port: 8072
 
+# I want to connect with the eureka server since i am the only single entry point i should aware of all the microservices first
 eureka:
   instance:
     preferIpAddress: true
